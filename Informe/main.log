@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  23 JAN 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  23 JAN 2019 13:31
 entering extended mode
 **./main.tex
 (main.tex
@@ -626,45 +626,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--115
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 124.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--133
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3]
-Overfull \hbox (20.6664pt too wide) in paragraph at lines 139--155
+ [3]
+Overfull \hbox (20.6664pt too wide) in paragraph at lines 137--153
  [][] 
  []
-
-<barras2.pdf, id=17, 469.755pt x 325.215pt>
-File: barras2.pdf Graphic file (type pdf)
-<use barras2.pdf>
-Package pdftex.def Info: barras2.pdf  used on input line 161.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.73615pt too wide) in paragraph at lines 161--162
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--163
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-Overfull \vbox (182.29173pt too high) has occurred while \output is active []
+<barras2.pdf, id=20, 469.755pt x 325.215pt>
+File: barras2.pdf Graphic file (type pdf)
+<use barras2.pdf>
+Package pdftex.def Info: barras2.pdf  used on input line 160.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 160--161
+ [][] 
+ []
 
 
-[5 <./barras2.pdf>]
-<boxplot1.pdf, id=29, 476.78125pt x 325.215pt>
+Underfull \hbox (badness 10000) in paragraph at lines 156--162
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+<boxplot1.pdf, id=24, 476.78125pt x 325.215pt>
 File: boxplot1.pdf Graphic file (type pdf)
 <use boxplot1.pdf>
 Package pdftex.def Info: boxplot1.pdf  used on input line 171.
@@ -674,18 +666,57 @@ Overfull \hbox (35.76236pt too wide) in paragraph at lines 171--172
  [][] 
  []
 
-[6 <./boxplot1.pdf>] [7] (main.aux
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./barras2.pdf>]
+<barrasnumerodehijos.pdf, id=33, 469.755pt x 325.215pt>
+File: barrasnumerodehijos.pdf Graphic file (type pdf)
+<use barrasnumerodehijos.pdf>
+Package pdftex.def Info: barrasnumerodehijos.pdf  used on input line 182.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
+
+[7 <./boxplot1.pdf>]
+<barrasnumerodenietos1.pdf, id=45, 469.755pt x 325.215pt>
+File: barrasnumerodenietos1.pdf Graphic file (type pdf)
+<use barrasnumerodenietos1.pdf>
+Package pdftex.def Info: barrasnumerodenietos1.pdf  used on input line 191.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+
+Underfull \vbox (badness 4569) has occurred while \output is active []
+
+ [8 <./barrasnumerodehijos.pdf>]
+<usoderedes.pdf, id=54, 469.755pt x 325.215pt>
+File: usoderedes.pdf Graphic file (type pdf)
+<use usoderedes.pdf>
+Package pdftex.def Info: usoderedes.pdf  used on input line 200.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 200--201
+ [][] 
+ []
+
+[9 <./barrasnumerodenietos1.pdf>] [10 <./usoderedes.pdf>] [11] (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 3013 strings out of 493290
- 41862 string characters out of 3123767
+ 3029 strings out of 493290
+ 42310 string characters out of 3123767
  115178 words of memory out of 3000000
- 6522 multiletter control sequences out of 15000+200000
+ 6535 multiletter control sequences out of 15000+200000
  9117 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,43p,927b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,43p,928b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Esteban Bermúde
@@ -694,9 +725,9 @@ z/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
 amsfonts/cm/cmr6.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Esteban Bermúdez/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on main.pdf (7 pages, 114490 bytes).
+Output written on main.pdf (11 pages, 129410 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

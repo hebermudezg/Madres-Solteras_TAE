@@ -51,7 +51,7 @@
 
 \begin{abstract}
 \noindent
-El presente proyecto pretende conocer cuáles son los factores que más afectan el nivel de satisfacción las madres solteras en Colombia y también crear una aplicación web para predecir este nivel de satisfacción. Para conocer este fenómeno el grupo de trabajo \textbf{Statisoft 2.0} empleo datos abiertos del Departamento Administrativo Nacional de Estadística \textbf{(DANE)} de la Encuesta de Calidad de Vida del año 2017 y usando técnicas estadísticas con los software \textbf{R} y el paquete Shinny crea un modelo estadístico y una aplicación de uso público que logra predecir el cómo se comporta satisfacción de las madres solteras usando las algunas de las variables de la encuesta es por eso que el grupo \textbf{StatiSoft 2.0} crea un entendimiento a partir de los conceptos amplios como calidad de vida y madre soltera para desenlazar con el desarrollo de la aplicación. \\
+El presente proyecto pretende conocer cuáles son los factores que más afectan el nivel de satisfacción las madres solteras en Colombia y también crear una aplicación web para predecir este nivel de satisfacción. Para conocer este fenómeno el grupo de trabajo \textbf{Statisoft 2.0} empleo datos abiertos del Departamento Administrativo Nacional de Estadística \textbf{(DANE)} de la Encuesta de Calidad de Vida del año 2017 y usando técnicas estadísticas con los software \textbf{R} y el paquete Shinny crea un modelo estadístico y una aplicación de uso público que logra predecir el cómo se comporta satisfacción de las madres solteras usando las algunas de las variables de la encuesta, es por eso que el grupo \textbf{StatiSoft 2.0} crea un entendimiento a partir de los conceptos amplios como calidad de vida y madre soltera para desenlazar con el desarrollo de la aplicación. \\
 \textbf{Palabras Clave}: satisfacción personal, calidad de vida, madre soltera.
 \end{abstract}
 
@@ -108,7 +108,7 @@ El objetivo principal del proyecto es
 
 \section{Metodología}
 \noindent
-En la primera etapa del desarrollo de nuestra aplicación fue preciso definir claramente la información a analizar y la metodología estadística a implementar para crear el modelo que permita hacer la correcta predicción del nivel de satisfacción de las madres solteras en Colombia. Para el estudio se usaron los datos de la encuesta nacional de calidad de vida del Departamento Administrativo Nacional de Estadística DANE, donde se seleccionaron las mujeres que cumplieran con las características de tener uno o más hijos y que fueran solteras o viudas esto acorde con la definición mencionada (ver sección \textbf{2. Definiciones}).
+En la primera etapa del desarrollo del trabajo fue preciso hacer un análisis descriptivo previo, para observar el comportamiento de las posibles variables significativas para el modelo, y luego adoptar la metodología estadística a implementar (ver sección 3.1) para crear el modelo que permita hacer la correcta predicción del nivel de satisfacción de las madres solteras en Colombia. Para el estudio se usaron los datos de la encuesta nacional de calidad de vida del \textbf{DANE}, donde se seleccionaron las mujeres que cumplieran con las características de tener uno o más hijos y que fueran solteras o viudas esto acorde con la definición mencionada (ver sección \textbf{2. Definiciones}).
 \\
 Nuestro estudio se enfocó en analizar cómo las variables de características y composición del hogar y el acceso a tecnologías de información y comunicación afecta el nivel de vida de las madres solteras, en primera instancia para el análisis estadístico se realiza un análisis descriptivo de la base de datos, obteniendo como resultado una depuración de observaciones que no brindan información relevante para la estimación del nivel se satisfacción de vida, se realiza una limpieza de datos eliminando las observaciones que presentaban información faltante (NA) en nuestras variables a analizar, posteriormente se hace el análisis del modelamiento estadístico, se describe claramente como se realizo este, y por último se hace un análisis diagnostico del modelo para evaluar la calidad del mismo. 
 \\
@@ -116,7 +116,7 @@ Nuestro estudio se enfocó en analizar cómo las variables de características y
 \noindent
 En la Tabla 1 se muestra la dimensión del conjunto de datos analizados para este proyecto, donde se tiene un total de 901 registros y 24 variables.
 %**-------------------- Tabla 1 -----------
-\begin{table}[h]
+\begin{table}[H]
 	\caption{\small{Dimensión de la base de datos.}}
 	\label{tabla1}
 	\centering {\small
@@ -127,12 +127,10 @@ En la Tabla 1 se muestra la dimensión del conjunto de datos analizados para est
 		901             & 24                 \\ \bottomrule
 	\end{tabular}}
 \end{table}
-\\
 Cada registro corresponde a una madre soltera acorde con la definición mencionada (ver sección\textbf{ 2. Definiciones}) y cada columna corresponde a una variable medida en la madre soltera en aspectos de estructura del hogar al que pertenece y acceso a tecnologias de información y la comunicación. 
-\\
+
 \paragraph{Descripción de las variables:} a continuación se muestran una descripción de las variables medidas para cada madre soltera (ver Tabla 2). 
-\\
-\begin{table}[h]
+\begin{table}[H]
 	\caption{\small{Descripción de la variables medidas a las madres solteras.}}
 	\label{tabla2}
 	\centering {\small
@@ -153,7 +151,8 @@ Cada registro corresponde a una madre soltera acorde con la definición menciona
 		P1902 & \begin{tabular}[c]{@{}l@{}}Qué tan tranquila se sintió ayer \\ (del 0 al 10)\end{tabular} & P804 & \begin{tabular}[c]{@{}l@{}}Frecuencia con la que escucha\\ señal de radio\end{tabular} \\ \bottomrule
 	\end{tabular}}
 \end{table}
-\\
+
+
 \textbf{Análisis descriptivo de la variable respuesta:} en la Figura 1 se muestra un diagrama de de barras donde se aprecia una asimetría de la frecuencia, esto es un sesgo a la izquierda en la distribución del nivel de satisfacción, del mismo modo se puede notar que la mayor parte de las madres solteras tiene una satisfacción superior a seis (6). 
 \\
 \begin{figure}[H]
@@ -163,24 +162,56 @@ Cada registro corresponde a una madre soltera acorde con la definición menciona
 \end{figure}
 
 
+
+\vspace{100px}
 \noindent
 En la Figura 2 se muestra el diagrama de caja y bigotes de la distribución de la variable respuesta donde se puede observar que el un 75{\%} de las madres solteras tiene un nivel de satisfacción superior al nivel 7. 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics{boxplot1.pdf}
 	\caption{Diagrama de caja y bigotes (boxplot) de la distribución de la satisfacción de las madres solteras}
 \end{figure}
+% hace falta porner otros graficoss****
+
+
+\vspace{120px}
+\noindent
+En la Figura 3 se muestra un gráfico de barras de la distribución del número de hijos de las madres solteras, se puede observar claramente que la existen 557 madres que tienen 1 solo hijo, mientras que apenas existen 7 mujeres con 5 hijos.  
+\begin{figure}[H]
+	\centering
+	\includegraphics{barrasnumerodehijos.pdf}
+	\caption{Distribución de la cantidad de hijos de las madres solteras}
+\end{figure}
+
+\vspace{140px}
+\noindent
+En la Figura 4 se muestra un gráfico de barras que muestra la distribución del número de nietos de la madre soltera, donde se observa que la mayoría de las madres solteras no tienen nietos aún.
+\begin{figure}[H]
+	\centering
+	\includegraphics{barrasnumerodenietos1.pdf}
+	\caption{Distribución de la cantidad de nietos de las madres solteras}
+\end{figure}
+
+\vspace{140px}
+\noindent
+En la Figura 5 se muestra la distribución del uso de las redes sociales donde ser puede observar que la mayor parte de las madres solteras no hacen uso de esta herramienta.
+\begin{figure}[H]
+	\centering
+	\includegraphics{usoderedes.pdf}
+	\caption{Distribución del uso de la redes sociales}
+\end{figure}
+
 
 
 \subsection{Modelamiento estadístico}
-
-Se decidió implementar un modelo de regresión logística multinomial, metodología enmarcada en los modelos lineales generalizados (MLG) que permite más de dos posibles resultados para la variable respuesta de tipo categórico ordinal. 
-
-
-
+\noindent
+Se decidió implementar un modelo de regresión logística multinomial, metodología enmarcada en los modelos lineales generalizados\textbf{ (MLG)} que permite más de dos posibles resultados para la variable respuesta de tipo categórico ordinal. 
+\\
 Antes de realizar el modelo multinomial se realizó un modelo de regresión lineal múltiple (suponiendo la variable respuesta como cuantitativa) para evaluar el proceso de selección de variables, este procedimiento se desarrolló haciendo uso función stepGAIC() de la librería MASS en el software estadístico R, lo cual permite usar un procedimiento de selección de variables hacia adelante (forward) y hacia atrás (backward), definiendo como frontera del modelo la combinación lineal de todas las variables explicativas categóricas (ya convertidas en factores, variables dummy) como también la interacción sencilla entre las variables explicativas cuantitativas.
 Las variables seleccionadas con la función stepGAIC() y parámetro (direction=’both’) que me permite hacer selección de variables en ambas direcciones.
+
+
+
 
 
 
