@@ -108,10 +108,9 @@ El objetivo principal del proyecto es
 
 \section{Metodología}
 \noindent
-En la primera etapa del desarrollo del trabajo fue preciso hacer un análisis descriptivo previo, para observar el comportamiento de las posibles variables significativas para el modelo, y luego adoptar la metodología estadística a implementar (ver sección 3.1) para crear el modelo que permita hacer la correcta predicción del nivel de satisfacción de las madres solteras en Colombia. Para el estudio se usaron los datos de la encuesta nacional de calidad de vida del \textbf{DANE}, donde se seleccionaron las mujeres que cumplieran con las características de tener uno o más hijos y que fueran solteras o viudas esto acorde con la definición mencionada (ver sección \textbf{2. Definiciones}).
+En la primera etapa del desarrollo del trabajo fue preciso hacer un análisis descriptivo previo, para observar el comportamiento de las posibles variables significativas para el modelo, y luego adoptar la metodología estadística a implementar para crear el modelo que permita hacer la correcta predicción del nivel de satisfacción de las madres solteras en Colombia. Para el estudio se usaron los datos de la encuesta nacional de calidad de vida del \textbf{DANE}, donde se seleccionaron las mujeres que cumplieran con las características de tener uno o más hijos y que fueran solteras o viudas esto acorde con la definición mencionada (ver sección \textbf{2. Definiciones}).
 \\
-Nuestro estudio se enfocó en analizar cómo las variables de características y composición del hogar y el acceso a tecnologías de información y comunicación afecta el nivel de vida de las madres solteras, en primera instancia para el análisis estadístico se realiza un análisis descriptivo de la base de datos, obteniendo como resultado una depuración de observaciones que no brindan información relevante para la estimación del nivel se satisfacción de vida, se realiza una limpieza de datos eliminando las observaciones que presentaban información faltante (NA) en nuestras variables a analizar, posteriormente se hace el análisis del modelamiento estadístico, se describe claramente como se realizo este, y por último se hace un análisis diagnostico del modelo para evaluar la calidad del mismo. 
-\\
+Nuestro estudio se enfocó en analizar cómo las variables de características y composición del hogar y el acceso a tecnologías de información y comunicación afectan el nivel  de satisfacción de las madres solteras, se  realiza el análisis descriptivo de la base de datos(ver sección 3.1), obteniendo como resultado una depuración de observaciones que no brindan información relevante para la estimación del nivel de satisfacción de vida, se realiza una limpieza de datos eliminando las observaciones que presentaban información faltante (NA) en nuestras variables a analizar, posteriormente se hace el análisis del modelamiento estadístico (ver sección 3.2), se describe claramente cómo se realizó este, y por último se hace un análisis diagnóstico del modelo para evaluar la calidad del mismo (ver sección 3.3).
 \subsection{Análisis descriptivo}
 \noindent
 En la Tabla 1 se muestra la dimensión del conjunto de datos analizados para este proyecto, donde se tiene un total de 901 registros y 24 variables.
@@ -138,7 +137,7 @@ Cada registro corresponde a una madre soltera acorde con la definición menciona
 		\toprule
 		Variable & Descripción & Variable & Descripción \\ \midrule
 		P6040 & Edad  en años & P1903 & \begin{tabular}[c]{@{}l@{}}Qué tan preocupada se sintió ayer\\ (del 0 al 10)\end{tabular} \\
-		P5502 & Casada o Viuda & P1904 & \begin{tabular}[c]{@{}l@{}}Qué tan triste se sintió ayer \\ (del 0 al 10)\end{tabular} \\
+		P5502 & Soltera o Viuda & P1904 & \begin{tabular}[c]{@{}l@{}}Qué tan triste se sintió ayer \\ (del 0 al 10)\end{tabular} \\
 		P6081 & \begin{tabular}[c]{@{}l@{}}El padre vive en el hogar\\  (si o no)\end{tabular} & P1905 & \begin{tabular}[c]{@{}l@{}}Qué tanto considera que las cosas\\  que hace en su vida valen la pena \\ (del 0 al 10)\end{tabular} \\
 		P6083 & \begin{tabular}[c]{@{}l@{}}La madre de vive en el hogar\\ (si o no)\end{tabular} & N\_HIJOS & Número de hijos \\
 		P6080 & \begin{tabular}[c]{@{}l@{}}Se reconoce como (Indegena, Gitano, \\ Raizal, Palenquero, Negro o \\ ninguno de los anteriores)\end{tabular} & N\_NIETOS & Número de nietos \\
@@ -205,12 +204,53 @@ En la Figura 5 se muestra la distribución del uso de las redes sociales donde s
 
 \subsection{Modelamiento estadístico}
 \noindent
+
 Se decidió implementar un modelo de regresión logística multinomial, metodología enmarcada en los modelos lineales generalizados\textbf{ (MLG)} que permite más de dos posibles resultados para la variable respuesta de tipo categórico ordinal. 
 \\
-Antes de realizar el modelo multinomial se realizó un modelo de regresión lineal múltiple (suponiendo la variable respuesta como cuantitativa) para evaluar el proceso de selección de variables, este procedimiento se desarrolló haciendo uso función stepGAIC() de la librería MASS en el software estadístico R, lo cual permite usar un procedimiento de selección de variables hacia adelante (forward) y hacia atrás (backward), definiendo como frontera del modelo la combinación lineal de todas las variables explicativas categóricas (ya convertidas en factores, variables dummy) como también la interacción sencilla entre las variables explicativas cuantitativas.
-Las variables seleccionadas con la función stepGAIC() y parámetro (direction=’both’) que me permite hacer selección de variables en ambas direcciones.
+Antes de realizar el modelo multinomial se realizó un modelo de regresión lineal múltiple haciendo uso de la funcion lm() (suponiendo inicialmente la variable respuesta como cuantitativa) esto con el fin de evaluar el proceso de selección de variables el cual se desarrolló haciendo uso función stepGAIC() de la librería MASS en el software estadístico R, lo cual permite usar un procedimiento de selección de variables hacia adelante (forward) y hacia atrás (backward), definiendo como frontera del modelo la combinación lineal de todas las variables explicativas categóricas (ya convertidas en variables dummy) como también la interacción sencilla entre las variables explicativas cuantitativas.
 
+\vspace{20px}
+\noindent
+En la Tabla 3 se muestra los estadísticos de resumen calculados con la funcion lm() del modelo de regresión lineal múltiple(suponiendo inicialmente variable respuesta como cuantitativa)
+\begin{table}[H]
+	\caption{\small{Resumen del modelo1}}
+	\label{tabla1}
+	\centering {\small
+		\begin{tabular}{@{}cccccc@{}}
+			\toprule
+			Modelo & R$^{2}$  & \rho_{y,\hat{y}} & AIC \\ \midrule
+			Modelo1 & 0.47 & 0.71 & 3253.336\\ 
+			\bottomrule
+	\end{tabular}}
+\end{table}
+\noindent
+Se hace un proceso de selección de variables haciendo uso de la función stepGAIC() con parámetro (direction=’both’) para hacer selección en ambas direcciones, la variables seleccionadas se muestran en la Tabla 4.
 
+\begin{table}[H]
+	\caption{\small{Variables  seleccionadas}}
+	\centering {\small
+	\begin{tabular}{@{}cc@{}}
+		\toprule
+		\multicolumn{2}{c}{Variables  seleccionadas}                          \\ \midrule
+		P1896              & Satisfacción con el ingreso                      \\
+		P1897              & Satisfacción con la salud                        \\
+		P1898              & Satisfacción con el nivel de seguridad           \\
+		P1901              & Nivel felicidad del día de ayer                  \\
+		P1902              & Nivel de tranquilidad del día de ayer            \\
+		P1905              & Satisfacción con las cosas que hace              \\
+		P1084              & Frecuencia con la que usa internet               \\
+		P1083S3            & Uso de redes sociales                            \\
+		N\_HIJOS           & Número de hijos                                  \\
+		N\_NIETOS          & Número de nietos                                 \\
+		N\_HIJOS:N\_NIETOS & Número de hijos x número de nietos (interacción) \\ \bottomrule
+	\end{tabular}}
+\end{table}
+
+\noindent
+Modelo de regresión logística multinomial 
+
+\noindent
+Una vez seleccionadas estas variables se implementa el modelo multinomial con todas variables anteriormente descritas, el resultado del resumen se muestra a continuación, donde se aprecia la desviación residual y el Criterio de información de Akaike (AIC) calculado
 
 
 
@@ -219,6 +259,8 @@ Las variables seleccionadas con la función stepGAIC() y parámetro (direction=�
 
 \subsection{Diagnóstico del Modelo}
 
+Para cuantificar la bondad del ajuste global del modelo se construye una matriz de clasificación observados-predichos y se utiliza el porcentaje de clasificaciones correctas como una medida de la calidad de predicción
+La tasa de clasificación del modelo es de 61, 54 \%
 
 
 
@@ -230,6 +272,8 @@ Las variables seleccionadas con la función stepGAIC() y parámetro (direction=�
 \section{Conclusiones}
 
 
+Para el modelamiento estadístico que involucra una variable respuesta de tipo categórico en el caso en que esta tenga más de dos categorías, es preciso y más eficiente utilizar metodología de la regresión logística multinomial.
+El modelo multinomial planteado funciona correctamente para predecir la satisfacción de las mujeres solteras en función de las características y composición del hogar como número de hijos y número de nietos, niveles subjetivos de satisfacción en seguridad, salud, felicidad y tranquilidad como también variables de acceso a tecnologías de la información y comunicación como acceso a internet y a redes sociales, es por esto que este fue el modelo que se implementó en la aplicación web StatiSfoft   
 
 
 
