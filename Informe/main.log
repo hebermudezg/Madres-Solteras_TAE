@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  23 JAN 2019 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  30 JAN 2019 16:24
 entering extended mode
 **./main.tex
 (main.tex
@@ -475,27 +475,23 @@ s
 (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-
-
-LaTeX Warning: Label `tabla1' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
@@ -574,32 +570,32 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 43.
+(Font)              <10.95> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 43.
+(Font)              <6> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 43.
+(Font)              <9> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
+(Font)              <5> on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--79
+Underfull \hbox (badness 10000) in paragraph at lines 65--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--79
+Underfull \hbox (badness 10000) in paragraph at lines 65--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--79
+Underfull \hbox (badness 10000) in paragraph at lines 65--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--79
+Underfull \hbox (badness 10000) in paragraph at lines 65--82
 
  []
 
@@ -613,145 +609,148 @@ Package Fancyhdr Warning: \headheight is too small (0.56917pt):
 }
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 85--95
+Underfull \hbox (badness 10000) in paragraph at lines 88--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--95
+Underfull \hbox (badness 10000) in paragraph at lines 88--98
 
  []
 
-[2]
+[2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 123.
- [3]
-Overfull \hbox (20.6664pt too wide) in paragraph at lines 136--152
+(Font)              <7> on input line 126.
+
+Overfull \hbox (20.6664pt too wide) in paragraph at lines 141--157
  [][] 
  []
 
-<barras2.pdf, id=17, 469.755pt x 325.215pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+<barras2.pdf, id=20, 469.755pt x 325.215pt>
 File: barras2.pdf Graphic file (type pdf)
 <use barras2.pdf>
-Package pdftex.def Info: barras2.pdf  used on input line 159.
+Package pdftex.def Info: barras2.pdf  used on input line 164.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (28.73615pt too wide) in paragraph at lines 159--160
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 164--165
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--161
+Underfull \hbox (badness 10000) in paragraph at lines 160--166
 
  []
 
-[4]
-<boxplot1.pdf, id=21, 476.78125pt x 325.215pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+<boxplot1.pdf, id=24, 476.78125pt x 325.215pt>
 File: boxplot1.pdf Graphic file (type pdf)
 <use boxplot1.pdf>
-Package pdftex.def Info: boxplot1.pdf  used on input line 170.
+Package pdftex.def Info: boxplot1.pdf  used on input line 175.
 (pdftex.def)             Requested size: 476.78008pt x 325.2142pt.
 
-Overfull \hbox (35.76236pt too wide) in paragraph at lines 170--171
+Overfull \hbox (35.76236pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./barras2.pdf>]
-<barrasnumerodehijos.pdf, id=30, 469.755pt x 325.215pt>
+ [6 <./barras2.pdf>]
+<barrasnumerodehijos.pdf, id=33, 469.755pt x 325.215pt>
 File: barrasnumerodehijos.pdf Graphic file (type pdf)
 <use barrasnumerodehijos.pdf>
-Package pdftex.def Info: barrasnumerodehijos.pdf  used on input line 181.
+Package pdftex.def Info: barrasnumerodehijos.pdf  used on input line 186.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (28.73615pt too wide) in paragraph at lines 181--182
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./boxplot1.pdf>]
-<barrasnumerodenietos1.pdf, id=41, 469.755pt x 325.215pt>
+[7 <./boxplot1.pdf>]
+<barrasnumerodenietos1.pdf, id=45, 469.755pt x 325.215pt>
 File: barrasnumerodenietos1.pdf Graphic file (type pdf)
 <use barrasnumerodenietos1.pdf>
-Package pdftex.def Info: barrasnumerodenietos1.pdf  used on input line 190.
+Package pdftex.def Info: barrasnumerodenietos1.pdf  used on input line 195.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (28.73615pt too wide) in paragraph at lines 190--191
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 195--196
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4569) has occurred while \output is active []
 
- [7 <./barrasnumerodehijos.pdf>]
-<usoderedes.pdf, id=51, 469.755pt x 325.215pt>
+ [8 <./barrasnumerodehijos.pdf>]
+<usoderedes.pdf, id=54, 469.755pt x 325.215pt>
 File: usoderedes.pdf Graphic file (type pdf)
 <use usoderedes.pdf>
-Package pdftex.def Info: usoderedes.pdf  used on input line 199.
+Package pdftex.def Info: usoderedes.pdf  used on input line 204.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (28.73615pt too wide) in paragraph at lines 199--200
+Overfull \hbox (28.73615pt too wide) in paragraph at lines 204--205
  [][] 
  []
 
+[9 <./barrasnumerodenietos1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ []
 
- [8 <./barrasnumerodenietos1.pdf>] [9 <./usoderedes.pdf>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.221 			Modelo & R$^{2}$  & \rho
-                                 _{y,\hat{y}} & AIC \\ \midrule
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[10 <./usoderedes.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.221 			Modelo & R$^{2}$  & \rho_{y,\hat{y}} &
-                                                AIC \\ \midrule
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+ []
 
-[10] [11] (main.aux
+[11] [12]
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+ [14]
+[15]
+Overfull \hbox (2.85028pt too wide) in paragraph at lines 487--488
+[]\OT1/cmr/m/n/10.95 [2] Pro-ble-mas que de-be en-fren-tar una ma-dre sol-te-ra
+ - https://madresoltera.org/problemas/ 
+ []
+
+[16] (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 3029 strings out of 493290
- 42310 string characters out of 3123767
- 115218 words of memory out of 3000000
- 6535 multiletter control sequences out of 15000+200000
- 9117 words of font info for 32 fonts, out of 3000000 for 9000
+ 3032 strings out of 493290
+ 42418 string characters out of 3123767
+ 120178 words of memory out of 3000000
+ 6537 multiletter control sequences out of 15000+200000
+ 9285 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,43p,928b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Esteban Bermúdez
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Esteban Bermúdez/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/
-Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr7.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Esteban Bermúdez/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on main.pdf (11 pages, 154904 bytes).
+ 41i,15n,43p,1413b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Esteban Bermúde
+z/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Esteban Bermúdez/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users
+/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr7.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Esteban Bermúdez/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Esteban B
+ermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (16 pages, 184974 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

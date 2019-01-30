@@ -1,13 +1,13 @@
 
 # Leyendo la base de datos-------------------------------------
 library(readxl)
-Datosssm <- read_excel(file.choose())
+Datosssm <- read_excel("Databases/Tabla_Pequena_Filtrada.xlsx")
 #View(Tabla_Pequena_Filtrada)
 #View(Datosssm)
 ## Dimension de la base de datos........................................... 
 dim(Datosssm)
 summary(Datosssm)
-
+names(Datosssm2)
 ## Verifiquemos los datos faltantes........................................
 apply(Datosssm, 2, function(x) sum(is.na(x)))
 
@@ -21,6 +21,7 @@ apply(Datosssm, 2, function(x) sum(is.na(x)))
 Datosssm2 <- Datosssm[,colSums(is.na(Datosssm))==0] 
 Datosssm2 <- Datosssm2[,-c(1,2)] 
 apply(Datosssm2, 2, function(x) sum(is.na(x)))
+dim(Datosssm2)
 ## Dataframe con datos completos.....................................
 
 names(Datosssm2)
@@ -65,6 +66,30 @@ ggplot(data, aes(x=Nivel_de_Satisfaccion, y=Frecuencia)) +
 pdf(file= "D:/boxplot1.pdf", height = 4.5, width = 6.6)
 boxplot(Datosssm2$P1895, main = "Distribución del nivel de satisfacción de las madres solteras")
 #dev.off()
+
+
+######  hagamos un grafico de la distribucion de los hijos
+
+pdf(file = "barrasnumerodehijos.pdf", height = 4.5, width = 6.5)
+barplot(table(Datosssm2$N_HIJOS), xlab = "Número de hijos", ylab = "cantidad")
+dev.off()
+
+
+#### hagamos un grafico con la distribución del número de nietos
+
+pdf(file = "barrasnumerodenietos1.pdf", height = 4.5, width = 6.5)
+barplot(table(Datosssm2$N_NIETOS), xlab = "Número de nietos", ylab = "cantidad")
+dev.off()
+
+pdf(file = "usoderedes.pdf", height = 4.5, width = 6.5)
+barplot(table(Datosssm2$P1083S3), col = c("brown1", "cornflowerblue"), names.arg = c("NO", "SI"), xlab = "Uso de redes sociales", ylab = "cantidad")
+dev.off()
+
+
+table(Datosssm2$P5502)
+
+
+
 
 
 data$Edad <- as.numeric_version(data$Edad)
@@ -162,8 +187,7 @@ Datosssm2$P1082 <- factor(Datosssm2$P1082) # utiliza _____ celular ?
 #Datosssm2$P804 <- factor(Datosssm2$P804) # radio
 
 # Variable respuesta
-
-Datosssm2$P1895 <- factor(Datosssm2$P1895) # radio
+#Datosssm2$P1895 <- factor(Datosssm2$P1895) # radio
 
 boxplot(Datosssm2$P1895, main = "Diagrama de caja de Nivel de satisfacción de las madres solteras")
 h <- table(Datosssm2$P1895)
@@ -177,11 +201,33 @@ barplot(Datosssm2$P1895, main="Car Distribution",
 
 
 
-
 ## Hagamos nuestro primer modelo con lm (minimos cuadrados)
 mod0 <- lm(P1895~P6040+P5502+P6080+P1896+P1897+P1898+P1899+P1901+P1902+P1903+P1904+P1905+N_HIJOS+N_NIETOS+P1910+P1911+P1912+P1084+P1083S3+P1082, Datosssm2)
 summary(mod0)
 
+
+
+
+
+
+
+
+# con las variables seleccionadas ****
+
+mod00 <- lm(P1895 ~ P1896 + P1897 + P1898 + P1901 + P1902 + P1905 + N_HIJOS + N_NIETOS + N_HIJOS:N_NIETOS, Datosssm2)
+summary(mod00)
+
+
+
+library("hydroGOF")
+mse(Datosssm2$P1895, mod0$fitted.value)
+
+AIC(mod0)
+sum()
+  
+mod0$fitted.values
+cor(Datosssm2$P1895, mod0$fitted.values)
+plot(Datosssm2$P1895, mod0$fitted.values)
 
 ## vamos la matriz de diseño 
 model.matrix(mod0)
@@ -219,10 +265,19 @@ FORM1 <- as.formula("~(N_HIJOS+N_NIETOS+P6040)^2+P6040+P5502+P6080+P1896+P1897+P
 
 
 library(gamlss)
-mod1 <- gamlss(P1895~P6040+P5502+P6080+P1896+P1897+P1898+P1899+P1901+P1902+P1903+P1904+P1905+N_HIJOS+N_NIETOS+P1910+P1911+P1912+P1084+P1083S3+P1082,
-               data = Datosssm2)
-summary(mod1)
+mod1 <- gamlss(P1895~.,
+               data = datos)
+
+
+xtable(summary(mod1))
 Rsq(mod1)
+
+
+library("broom")
+salida <- tidy(summary(mod1))
+View(salida)
+str(salida$Pr...t..)
+salida <- data.frame(salida)
 
 
 
