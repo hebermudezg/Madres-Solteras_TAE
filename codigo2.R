@@ -1,3 +1,7 @@
+
+
+
+
 library(readxl)
 Datosssm <- read_excel("Databases/Tabla_Pequena_Filtrada.xlsx")
 datos <- Datosssm[,colSums(is.na(Datosssm))==0] 
@@ -123,6 +127,12 @@ clasificadorRF <- randomForest(formula2, data = datos, ntree = 250)
 pred_valid_RF <- predict(clasificadorRF, newdata = datos)
 matrizConfusion <- table(datos$P1895, pred_valid_RF)
 matrizConfusion
+
+
+
+
+
+
 
 sum(diag(matrizConfusion))
 dim(datos)[1]-sum(diag(matrizConfusion))
