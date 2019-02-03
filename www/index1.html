@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+</head>
+
+<body>
+
+  <h1>HTML UI</h1>
+	
+  <p>
+
+    <label>Edad:</label>
+    <input type="number" name="P6040" value="25" min="1" max="150" /><br />
+	<label>Satisfacción con el ingreso:</label>
+    <input type="number" name="P1896" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con la salud:</label>
+    <input type="number" name="P1897" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con el nivel de seguridad:</label>
+    <input type="number" name="P1898" value="5" min="0" max="10" /><br />
+	<label>Nivel de felicidad del día de ayer:</label>
+    <input type="number" name="P1901" value="5" min="0" max="10" /><br />
+	<label>Nivel de tranquilidad del día de ayer:</label>
+    <input type="number" name="P1902" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con las cosas que hace:</label>
+    <input type="number" name="P1905" value="5" min="0" max="10" /><br />
+	<label>Frecuencia con la que usa internet:</label>
+    <input type="number" name="P1084" value="5" min="0" max="5" /><br />
+	<label>Uso de redes sociales:</label>
+    <input type="number" name="P1083S3" value="1" min="0" max="2" /><br />
+	<label>Número de hijos:</label>
+    <input type="number" name="N_HIJOS" value="0" min="0" max="100" /><br />
+	<label>Número de nietos:</label>
+    <input type="number" name="N_NIETOS" value="0" min="0" max="100" />
+  </p>
+  
+  
+  <h3>Nivel de satisfacción:</h3>
+  <pre id="satisfaccion" class="shiny-text-output"></pre>
+	
+	
+  <h3>Salida</h3>
+  <pre id="salida" class="shiny-text-output"></pre>
+
+  <h3>Plot of data:</h3>
+  <div id="plot" class="shiny-plot-output"
+       style="width: 100%; height: 300px"></div>
+ <h3>Plot of data:</h3>
+  <div id="plot2" class="shiny-plot-output"
+       style="width: 100%; height: 300px"></div>
+
+
+	
+  <h3>Head of data:</h3>
+  <div id="table" class="shiny-html-output"></div>
+
+</body>
+</html>
