@@ -10,46 +10,36 @@
 <body>
 
   <h1>HTML UI</h1>
-
-  <p>
-    <label>Distribution type:</label><br />
-    <select name="dist">
-      <option value="norm">Normal</option>
-      <option value="unif">Uniform</option>
-      <option value="lnorm">Log-normal</option>
-      <option value="exp">Exponential</option>
-    </select>
-  </p>
-  <p>
-    <label>Distribution type:</label><br />
-    <select name="dist2">
-      <option value="norm">Normal</option>
-      <option value="unif">Uniform</option>
-      <option value="lnorm">Log-normal</option>
-      <option value="exp">Exponential</option>
-    </select>
-  </p>
-
 	
-	
-
   <p>
 
-    <label>Number of observations:</label><br />
-    <input type="number" name="n" value="500" min="1" max="1000" />
-
+    <label>Edad:</label>
+    <input type="number" name="P6040" value="25" min="1" max="150" /><br />
+	<label>Satisfacción con el ingreso:</label>
+    <input type="number" name="P1896" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con la salud:</label>
+    <input type="number" name="P1897" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con el nivel de seguridad:</label>
+    <input type="number" name="P1898" value="5" min="0" max="10" /><br />
+	<label>Nivel de felicidad del día de ayer:</label>
+    <input type="number" name="P1901" value="5" min="0" max="10" /><br />
+	<label>Nivel de tranquilidad del día de ayer:</label>
+    <input type="number" name="P1902" value="5" min="0" max="10" /><br />
+	<label>Satisfacción con las cosas que hace:</label>
+    <input type="number" name="P1905" value="5" min="0" max="10" /><br />
+	<label>Frecuencia con la que usa internet:</label>
+    <input type="number" name="P1084" value="5" min="0" max="5" /><br />
+	<label>Uso de redes sociales:</label>
+    <input type="number" name="P1083S3" value="1" min="0" max="2" /><br />
+	<label>Número de hijos:</label>
+    <input type="number" name="N_HIJOS" value="0" min="0" max="100" /><br />
+	<label>Número de nietos:</label>
+    <input type="number" name="N_NIETOS" value="0" min="0" max="100" />
   </p>
   
-
-  <p>
-
-    <label>Number of observations:</label><br />
-    <input type="number" name="nn" value="500" min="1" max="1000" />
-
-  </p>
   
-  <h3>Summary of data:</h3>
-  <pre id="summary" class="shiny-text-output"></pre>
+  <h3>Nivel de satisfacción:</h3>
+  <pre id="satisfaccion" class="shiny-text-output"></pre>
 	
 	
   <h3>Salida</h3>
