@@ -60,5 +60,3 @@ pred_valid_RF <- predict(clasificadorRF, newdata = xtest)
 # lo que se debe mostrar en la app **************
 print(pred_valid_RF)
 
-
-

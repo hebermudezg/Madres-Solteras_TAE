@@ -11,61 +11,102 @@
 
   <h1>HTML UI</h1>
 
+	  <p>
+    <label>Edad</label><br />
+     <input type="number" name="P6040" value="18" min="1" max="100" />
+     </p>
+	
+	
   <p>
-    <label>Distribution type:</label><br />
-    <select name="dist">
-      <option value="norm">Normal</option>
-      <option value="unif">Uniform</option>
-      <option value="lnorm">Log-normal</option>
-      <option value="exp">Exponential</option>
-    </select>
+    <label>satisfaccion con el ingreso</label><br />
+	   <input type="range" id="P1896" name="P1896"
+         min="0" max="10">
   </p>
+	
+	
+	
   <p>
-    <label>Distribution type:</label><br />
-    <select name="dist2">
-      <option value="norm">Normal</option>
-      <option value="unif">Uniform</option>
-      <option value="lnorm">Log-normal</option>
-      <option value="exp">Exponential</option>
-    </select>
+    <label>satisfaccion con la salud</label><br />
+	   <input type="range" id="P1897" name="P1897"
+         min="0" max="10">
   </p>
-
 	
 	
-
   <p>
-
-    <label>Number of observations:</label><br />
-    <input type="number" name="n" value="500" min="1" max="1000" />
-
-  </p>
-  
-
+    <label>satisfecho con el nivel de seguridad</label><br />
+	   <input type="range" id="P1898" name="P1898"
+         min="0" max="10">
+  </p>	
+	
+	
+   <p>
+    <label>feliz el dia de ayer</label><br />
+	   <input type="range" id="P1901" name="P1901"
+         min="0" max="10">
+  </p>	
+	
+   <p>
+    <label>tranquilo el dia de ayer</label><br />
+	   <input type="range" id="P1902" name="P1902"
+         min="0" max="10">
+  </p>	
+	
+	
   <p>
-
-    <label>Number of observations:</label><br />
-    <input type="number" name="nn" value="500" min="1" max="1000" />
-
-  </p>
-  
-  <h3>Summary of data:</h3>
-  <pre id="summary" class="shiny-text-output"></pre>
-	
-	
-  <h3>Salida</h3>
-  <pre id="salida" class="shiny-text-output"></pre>
-
-  <h3>Plot of data:</h3>
-  <div id="plot" class="shiny-plot-output"
-       style="width: 100%; height: 300px"></div>
- <h3>Plot of data:</h3>
-  <div id="plot2" class="shiny-plot-output"
-       style="width: 100%; height: 300px"></div>
+    <label>las cosas que hace en su vida valen la pena?</label><br />
+	   <input type="range" id="P1905" name="P1905"
+         min="0" max="10">
+  </p>	
 
 
 	
-  <h3>Head of data:</h3>
-  <div id="table" class="shiny-html-output"></div>
+	  <p>
+    <label>numero de hijos </label><br />
+    <input type="number" name="N_HIJOS" value="2" min="1" max="5" />
+  </p>	
+
+	
+	  <p>
+    <label>numero de nietos</label><br />
+    <input type="number" name="N_NIETOS" value="0" min="0" max="8" />
+  </p>	
+
+	
+	  <p>
+    <label>con que frecuencia usa intenet ?</label><br />	  
+	<select name="P1084">
+		
+      <option value="1">Todos los días de la semana</option>
+      <option value="2">Al menos una vez a la semana</option>
+	  <option value="3">Al menos una vez al mes</option>
+	  <option value="5">No utiliza internet</option>
+    </select>		  
+  </p>	
+
+	
+	
+   <p>
+    <label>utiliza _____ redes sociales ?</label><br />
+	<select name="P1083S3">
+      <option value="1">Si</option>
+      <option value="0">No</option>
+    </select>	
+  </p>	
+	
+	
+	
+	
+
+
+	
+  <h3>prediccion</h3>
+  <pre id="prediccion" class="shiny-text-output"></pre>
+	
+	
+		
+	
+<!--  <h3>Head of data:</h3>
+  <div id="table" class="shiny-html-output"></div> -->
 
 </body>
 </html>
