@@ -1,8 +1,8 @@
+library(shiny)
+set.seed(123)
 server <- function(input, output) {
+  
   library(readxl)
-  library(randomForest)
-  
-  
   Datosssm <- read_excel("Databases/Tabla_Pequena_Filtrada.xlsx")
   datos <- Datosssm[,colSums(is.na(Datosssm))==0] 
   datos <- datos[,-c(1,2)] 
@@ -35,47 +35,34 @@ server <- function(input, output) {
   #matrizConfusion
   
   
-  # predicción*** PARA LA APLICACIÖN **** ( aqui hay que insertar el id de las etiquetas en cada objeto html) en lugar de los valores particulares.
-  
-  
-  
-  
-  d <- reactive({
+  out <- reactive({
     
-    datos2 <- data.frame(P6040 = input$P6040, # edad
-                         P1896 = input$P1896, # satisfaccion con el ingreso
-                         P1897 = input$P1897, #satisfaccion con la salud
-                         P1898 = input$P1898, #satisfecho con el nivel de seguridad
-                         P1901 = input$P1901, # feliz el dia de ayer
-                         P1902 = input$P1902, #tranquilo el dia de ayer
-                         P1905 = input$P1905, #las cosas que hace en su vida valen la pena?
-                         N_HIJOS = input$N_HIJOS, # numero de hijos 
-                         N_NIETOS = input$N_NIETOS, # numero de nietos
-                         P1084 = input$P1084, #utiliza _____ intenet ?
-                         P1083S3 = input$P1083S3) # utiliza _____ redes sociales ?
+    # predicción*** PARA LA APLICACIÖN **** ( aqui hay que insertar el id de las etiquetas en cada objeto html) en lugar de los valores particulares.
     
-    
+    datos2 <- data.frame(P6040 = input$P6040, 
+                         P1896 = input$P1896,
+                         P1897 = input$P1897,
+                         P1898 = input$P1898,
+                         P1901 = input$P1901,
+                         P1902 = input$P1902,
+                         P1905 = input$P1905,
+                         N_HIJOS = input$N_HIJOS,
+                         N_NIETOS = input$N_NIETOS,
+                         P1084 = input$P1084,
+                         P1083S3 = input$P1083S3)
     # Este es un truco para igualas las clases y los niveles de cada variable. 
     xtest <- rbind(datos[1,-1] , datos2)
     xtest <- xtest[-1,]
-
-    
-    # relizado la predicción
-    pred_valid_RF <- predict(clasificadorRF, newdata = xtest)
-
     
   })
   
-  # outut - prediccion 
   
-  output$prediccion <- renderText({
-   as.character(d())
   
-    
+  output$satisfaccion <- renderText({
+    pred_valid_RF <- predict(clasificadorRF, newdata = out())
   })
+  
   
 }
-
-#..................................modelo html...........................................
 
 shinyApp(ui = htmlTemplate("www/index.html"), server)
