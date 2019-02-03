@@ -54,7 +54,7 @@
 
 \begin{abstract}
 \noindent
-Es importante para muchas organizaciones, entidades, fundaciones y en especial programas del gobierno nacional saber sobre la calidad de vida y el nivel de satisfacción de los colombianos, el presente trabajo está enfocado en analizar el nivel de satisfacción de las madres solteras en Colombia, y analizarlo con un conjunto de variables particulares asociadas a la estructura del hogar y el acceso a tecnologías de la información y comunicación entre otras, es por eso, que el presente proyecto pretende conocer cuáles son esos factores que más afectan el nivel de satisfacción las madres solteras en Colombia y también crear una aplicación web para predecir este nivel de satisfacción. Para conocer este fenómeno el grupo de trabajo \textbf{Statisoft 2.0} empleo datos abiertos del Departamento Administrativo Nacional de Estadística \textbf{(DANE)} de la Encuesta de Calidad de Vida del año 2017 y usando técnicas estadísticas con los software \textbf{R} y el paquete Shinny crea un modelo estadístico y una aplicación de uso público que logra predecir el cómo se comporta la satisfacción de las madres solteras usando las algunas de las variables de la encuesta, es por eso que el grupo \textbf{StatiSoft 2.0} crea un entendimiento a partir de los conceptos amplios como calidad de vida y madre soltera para desenlazar con el desarrollo de la aplicación. \\
+Es importante para muchas organizaciones, entidades, fundaciones y en especial programas del gobierno nacional saber sobre la calidad de vida y el nivel de satisfacción de los colombianos, el presente trabajo está enfocado en analizar el nivel de satisfacción de las madres solteras en Colombia, y analizarlo con un conjunto de variables particulares asociadas a la estructura del hogar y el acceso a tecnologías de la información y comunicación entre otras, es por eso, que el presente proyecto pretende conocer cuáles son esos factores que más afectan el nivel de satisfacción las madres solteras en Colombia como también crear una aplicación web para predecir este nivel de satisfacción. Para conocer este fenómeno el grupo de trabajo \textbf{Statisoft 2.0} empleo datos abiertos del Departamento Administrativo Nacional de Estadística \textbf{(DANE)} de la Encuesta de Calidad de Vida del año 2017 y usando técnicas estadísticas con los software \textbf{R} y el paquete Shinny crea un modelo estadístico y una aplicación de uso público que logra predecir el cómo se comporta la satisfacción de las madres solteras usando las algunas de las variables de la encuesta, es por eso que el grupo \textbf{StatiSoft 2.0} crea un entendimiento a partir de los conceptos amplios como calidad de vida y madre soltera para desenlazar con el desarrollo de la aplicación. \\
 \textbf{Palabras Clave}: satisfacción personal, calidad de vida, madre soltera.
 \end{abstract}
 
@@ -75,7 +75,7 @@ Con el objetivo de mostrar el nivel de satisfacción de las madres solteras en C
 \\
 \\
 \noindent
-Ante esta duda de cuál es el nivel de satisfacción de las madres solteras y qué factores influyen, es creada la aplicación \textbf{StatiSoft 2.0}, la cual tiene un desarrollo que podrá predecir el nivel de satisfacción de las madres solteras en función de variables como la percepción de satisfacción en cuanto al ingreso económico, salud, seguridad, felicidad, tranquilidad, número de hijos, número de nietos, acceso a internet y uso de redes sociales, para así predecir su nivel de satisfacción con la vida. 
+Ante esta duda de cuál es el nivel de satisfacción de las madres solteras y qué factores influyen, es creada la aplicación \textbf{StatiSoft 2.0}, la cual tiene un desarrollo que podrá predecir el nivel de satisfacción de las madres solteras en función de variables como la percepción de satisfacción en cuanto al ingreso económico, salud, seguridad, felicidad, tranquilidad, número de hijos, número de nietos, acceso a internet y uso de redes sociales, para así predecir su nivel de satisfacción.
 \\
 \\
 Esta aplicación es de  uso abierto y  baja complejidad por lo que a empresas y personas particulares  se les facilitará usarlo, ademas de ser fundamental para promover la investigación sobre las condiciones de vida y la medición de la pobreza en los hogares colombianos, donde las poblaciones más afectadas son las madres solteras que no cuentan con ayuda para la crianza de sus hijos y el manejo del hogar.
@@ -90,7 +90,7 @@ A continuación se definen claramente los conceptos tratados en nuestro estudio 
 \\
 \textbf{Madre soltera} \\
 Se denomina madre soltera generalmente a un tipo de familia monoparental, en la que una mujer lleva a cabo la crianza de los hijos y el manejo del hogar sin la compañía o apoyo de una pareja, por decisión propia o circunstancias de su entorno. En un sentido muy estricto se podría hablar con propiedad de núcleo familiar monoparental cuando el conjunto es formado por un progenitor (madre o padre, en este caso madre) y uno o varios hijos. Este núcleo puede constituir por sí solo una familia independiente (familia nuclear monoparental), o puede convivir con otras personas emparentadas. Por ejemplo, una madre (sin pareja) con dos hijos que convivan con sus padres constituye un núcleo monoparental en una familia extensa. Debido a esto no se excluyen el número de personas con las que viva la madre soltera.\\
-En conclusión, para nuestro estudio hemos tomado la mujeres solteras y viudas de cualquier edad que tiene uno o más hijos en el hogar.\\
+En conclusión, para nuestro estudio hemos tomado la mujeres solteras o viudas de cualquier edad que tiene uno o más hijos en el hogar.\\
 \\
 \textbf{Nivel de satisfacción con la vida}\\
 La satisfacción con la vida es una apreciación subjetiva que aporta al bienestar general, ya que permite evaluar de manera personal cómo va tu vida en relación con lo que esperas de ella. Tratar este tipo de temas resulta algo denso y complicado ya que la categorización de este requiere un análisis agudo según la satisfacción que tenga la persona con diferentes factores que pueden alterar su entorno y vida diaria.\\
@@ -113,7 +113,7 @@ El objetivo principal del proyecto es
 \noindent
 En la primera etapa del desarrollo del trabajo fue preciso hacer un análisis descriptivo previo, para observar el comportamiento de las posibles variables significativas para el modelo, y luego adoptar la metodología estadística a implementar para crear el modelo que permita hacer la correcta predicción del nivel de satisfacción de las madres solteras en Colombia. Para el estudio se usaron los datos de la encuesta nacional de calidad de vida del \textbf{DANE}, donde se seleccionaron las mujeres que cumplieran con las características de tener uno o más hijos y que fueran solteras o viudas esto acorde con la definición mencionada (ver sección \textbf{2. Definiciones}).
 \\
-Nuestro estudio se enfocó en analizar cómo las variables de características y composición del hogar y el acceso a tecnologías de información y comunicación afectan el nivel  de satisfacción de las madres solteras, se  realiza el análisis descriptivo de la base de datos(ver sección 3.1), obteniendo como resultado una depuración de observaciones que no brindan información relevante para la estimación del nivel de satisfacción de vida, se realiza una limpieza de datos eliminando las observaciones que presentaban información faltante (NA) en las variables a analizar, posteriormente se hace el análisis del modelamiento estadístico (ver sección 3.2), se describe cómo se realizó este, y por último se hace un análisis diagnóstico del modelo para evaluar la calidad del mismo (ver sección 3.3).
+Nuestro estudio se enfocó en analizar cómo las variables de características y composición del hogar y el acceso a tecnologías de información y comunicación afectan el nivel  de satisfacción de las madres solteras, se  realiza el análisis descriptivo de la base de datos (ver \textbf{sección 3.1}), obteniendo como resultado una depuración de observaciones que no brindan información relevante para la estimación del nivel de satisfacción de vida, se realiza una limpieza de datos eliminando las observaciones que presentaban información faltante (NA) en las variables a analizar, posteriormente se hace el análisis del modelamiento estadístico (ver \textbf{sección 3.2}), se describe cómo se realizó este, y por último se hace un análisis diagnóstico del modelo para evaluar la calidad del mismo (ver \textbf{sección 3.3}).
 \subsection{Análisis descriptivo}
 \noindent
 En la Tabla 1 se muestra la dimensión del conjunto de datos analizados para este proyecto, donde se tiene un total de 901 registros y 24 variables.
@@ -178,16 +178,16 @@ En la Figura 2 se muestra el diagrama de caja y bigotes de la distribución de l
 % hace falta porner otros graficoss****
 
 
-\vspace{120px}
+\vspace{180px}
 \noindent
-En la Figura 3 se muestra un gráfico de barras de la distribución del número de hijos de las madres solteras, se puede observar claramente que la existen 557 madres que tienen 1 solo hijo, mientras que apenas existen 7 mujeres con 5 hijos.  
+En la Figura 3 se muestra un gráfico de barras de la distribución del número de hijos de las madres solteras, se puede observar que la existen 557 madres que tienen 1 solo hijo, mientras que apenas existen 7 mujeres con 5 hijos.  
 \begin{figure}[H]
 	\centering
 	\includegraphics{barrasnumerodehijos.pdf}
 	\caption{Distribución de la cantidad de hijos de las madres solteras}
 \end{figure}
 
-\vspace{140px}
+\vspace{180px}
 \noindent
 En la Figura 4 se muestra un gráfico de barras que muestra la distribución del número de nietos de la madre soltera, donde se observa que la mayoría de las madres solteras no tienen nietos aún.
 \begin{figure}[H]
@@ -196,9 +196,9 @@ En la Figura 4 se muestra un gráfico de barras que muestra la distribución del
 	\caption{Distribución de la cantidad de nietos de las madres solteras}
 \end{figure}
 
-\vspace{140px}
+\vspace{180px}
 \noindent
-En la Figura 5 se muestra la distribución del uso de las redes sociales donde ser puede observar que la mayor parte de las madres solteras no hacen uso de esta herramienta.
+En la Figura 5 se muestra la distribución del uso de las redes sociales donde ser puede observar que la mayor parte de las madres solteras no hacen uso de esta herramienta tecnológica.
 \begin{figure}[H]
 	\centering
 	\includegraphics{usoderedes.pdf}
@@ -209,7 +209,7 @@ En la Figura 5 se muestra la distribución del uso de las redes sociales donde s
 
 \subsection{Modelamiento estadístico}
 \noindent
-Se decidió implementar varios modelos de clasificación con el fin de comprar el rendimiento de cada modelo y seleccionar aquel que tuviera mayor tasa de clasificación de respuestas correctas, esto se hizo analizando la matriz de confusión y la curva ROC.  
+Se decidió implementar varios modelos de clasificación con el fin de comprar el rendimiento de cada modelo y seleccionar aquel que tuviera mayor tasa de clasificación de respuestas correctas, esto se hizo analizando la matriz de confusión.  
 \\
 \\
 Antes de realizar el modelo de clasificación se realizó un modelo de regresión lineal múltiple haciendo uso de la funcion \texttt{lm()} (suponiendo inicialmente la variable respuesta como cuantitativa) esto con el fin de evaluar el proceso de selección de variables el cual se desarrolló haciendo uso función \texttt{stepGAIC()} de la librería MASS en el software estadístico R, lo cual permite usar un procedimiento de selección de variables hacia adelante (forward) y hacia atrás (backward), definiendo como frontera del modelo la combinación lineal de todas las variables explicativas categóricas (ya convertidas en variables dummy o factores) como también la interacción sencilla entre las variables explicativas cuantitativas.
@@ -231,7 +231,7 @@ En la Tabla 3 se muestra los estadísticos de resumen calculados con la función
 
 
 \noindent
-Se hace un proceso de selección de variables haciendo uso de la función \texttt{stepGAIC()} con parámetro (\texttt{direction=’backward’}) para hacer selección en ambas direcciones, la variables seleccionadas se muestran en la Tabla 4.
+Se hace un proceso de selección de variables haciendo uso de la función \texttt{stepGAIC()} con parámetro (\texttt{direction=’backward’}) para hacer selección hacia atrás, la variables seleccionadas se muestran en la Tabla 4.
 
 \begin{table}[H]
 	\caption{\small{Variables  seleccionadas}}

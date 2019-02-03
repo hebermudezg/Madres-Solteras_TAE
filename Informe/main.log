@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  30 JAN 2019 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.23)  2 FEB 2019 20:38
 entering extended mode
 **./main.tex
 (main.tex
@@ -673,7 +673,10 @@ Overfull \hbox (28.73615pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-[7 <./boxplot1.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./boxplot1.pdf>]
 <barrasnumerodenietos1.pdf, id=45, 469.755pt x 325.215pt>
 File: barrasnumerodenietos1.pdf Graphic file (type pdf)
 <use barrasnumerodenietos1.pdf>
@@ -685,7 +688,7 @@ Overfull \hbox (28.73615pt too wide) in paragraph at lines 195--196
  []
 
 
-Underfull \vbox (badness 4569) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./barrasnumerodehijos.pdf>]
 <usoderedes.pdf, id=54, 469.755pt x 325.215pt>
@@ -698,7 +701,10 @@ Overfull \hbox (28.73615pt too wide) in paragraph at lines 204--205
  [][] 
  []
 
-[9 <./barrasnumerodenietos1.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./barrasnumerodenietos1.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
@@ -708,14 +714,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
-[11] [12]
-Underfull \vbox (badness 1412) has occurred while \output is active []
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-Underfull \vbox (badness 6300) has occurred while \output is active []
-
- [14]
-[15]
+ [12]
+[13] [14] [15]
 Overfull \hbox (2.85028pt too wide) in paragraph at lines 487--488
 []\OT1/cmr/m/n/10.95 [2] Pro-ble-mas que de-be en-fren-tar una ma-dre sol-te-ra
  - https://madresoltera.org/problemas/ 
@@ -728,11 +731,11 @@ LaTeX Info: Redefining \% on input line 6.
 Here is how much of TeX's memory you used:
  3032 strings out of 493290
  42418 string characters out of 3123767
- 120178 words of memory out of 3000000
+ 121178 words of memory out of 3000000
  6537 multiletter control sequences out of 15000+200000
  9285 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,43p,1413b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,43p,1416b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Esteban Bermúde
@@ -748,7 +751,7 @@ Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Esteban B
 ermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Users/Esteban Bermúdez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (16 pages, 184974 bytes).
+Output written on main.pdf (16 pages, 185344 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
