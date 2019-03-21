@@ -475,6 +475,20 @@ material_row(
 
 material_side_nav_tab_content(
   side_nav_tab_id = "estructura",
+  
+  material_row(
+    material_modal(
+      modal_id = "ayuda",
+      button_text = "Ayuda",
+      title = "Ayuda",
+      shiny::tags$p("Seleccione una madre soltera de la tabla para calcular su nivel de satisfacción, su clasificación y ver un gráfico con la estructura del hogar."),
+      shiny::tags$p("Cada círculo del gráfico representa una persona."),
+      shiny::tags$p("Una flecha del círculo A al B indica que A es padre/madre de B."),
+      shiny::tags$p("Pon el mouse sobre una persona (círculo) para ver su relación con el jefe del hogar y su edad."),
+      shiny::tags$p("Arrastre los círculos con el mouse para acomodar sus posiciones a voluntad.")
+    )
+  ),
+  
   material_row(
     material_column(
       width = 4,
