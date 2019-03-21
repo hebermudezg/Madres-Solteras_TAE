@@ -1,0 +1,43 @@
+.card-title{
+	font-family: Arial Narrow;
+	font-size: 25px;
+	text-align: center;
+	color: #1E90FF;
+}
+
+.lever{
+	font-family: Arial Narrow;
+    font-size: 16px;
+    color: #1E90FF;
+}
+
+.shiny-bound-input{
+	font-family: Arial Narrow;
+    font-size: 16px;
+    color: #1E90FF;	
+}
+switch shiny-material-switch shiny-bound-input{
+	font-family: Arial Narrow;
+    font-size: 16px;
+    color: #1E90FF;	
+}
+
+.select-dropdown{
+	font-family: Arial Narrow;
+    font-size: 16px;
+    color: #1E90FF
+}
+select-dropdown{
+	font-family: Arial Narrow;
+    font-size: 16px;
+    color: #1E90FF
+}
+p{
+	text-align: center;
+}
+body{
+	
+}
+
+
+
