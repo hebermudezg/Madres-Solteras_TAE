@@ -82,23 +82,23 @@ server <- function(input, output, session) {
   probabilidades <- eventReactive(input$calcular, {
     
     valoresingresados <- data.frame(
-      P1896= as.factor(input$satisfaccion_ingreso),
-      P1897= as.factor(input$satisfaccion_salud),
-      P1898= as.factor(input$satisfaccion_seguridad),
-      P1901= as.factor(input$satisfaccion_felicidad),
-      P1902= as.factor(input$satisfaccion_tranquilidad),
-      P1905= as.factor(input$satisfaccion_cosas_hace),
-      N_HIJOS=input$numero_hijos,
-      N_NIETOS=input$numero_nietos,
-      P1084=as.factor(input$frecuencia_internet),
-      P1083S3= as.factor(input$redes_sociales)
-    )
+                   P1896= as.factor(input$satisfaccion_ingreso),
+                   P1897= as.factor(input$satisfaccion_salud),
+                   P1898= as.factor(input$satisfaccion_seguridad),
+                   P1901= as.factor(input$satisfaccion_felicidad),
+                   P1902= as.factor(input$satisfaccion_tranquilidad),
+                   P1905= as.factor(input$satisfaccion_cosas_hace),
+                   N_HIJOS=input$numero_hijos,
+                   N_NIETOS=input$numero_nietos,
+                   P1084=as.factor(input$frecuencia_internet),
+                   P1083S3= as.factor(input$redes_sociales)
+                                   )
     
     
-    satisfaccion_calculada2 <- predict(modmultinom, newdata = valoresingresados)
-    
-    
-    
+  satisfaccion_calculada2 <- predict(modmultinom, newdata = valoresingresados)
+  
+
+  
   })
   
   
@@ -106,9 +106,9 @@ server <- function(input, output, session) {
     Prob <- probabilidades()
     paste(Prob)
   })
+    
   
-  
-  
+
   output$satisfaccion_clasificada <- renderText({
     f = probabilidades()
     P = as.numeric(levels(f))[f]
@@ -117,8 +117,8 @@ server <- function(input, output, session) {
     else paste("Buena")
   })
   
-  
-  
+
+
   output$tablaDatos <- DT::renderDT({
     datatable(MadresCabezaHogar, selection = 'single', class="compact", options = list(
       # autoWidth = TRUE,
@@ -127,7 +127,7 @@ server <- function(input, output, session) {
       # ,columnDefs = list(list(width = '40000px', targets = 1))
     ))
   })
-  
+      
   output$satisfaccion_seleccion_calculada <- renderText({
     if(length(input$tablaDatos_rows_selected)){
       hogar <- MadresCabezaHogarRaw[input$tablaDatos_rows_selected,1]
@@ -156,14 +156,30 @@ server <- function(input, output, session) {
       hogar <- MadresCabezaHogarRaw[input$tablaDatos_rows_selected,1]
       MyData_filtered = DatosFamilias[DatosFamilias$LLAVEHOG == hogar,]
       
-      fathers = MyData_filtered[,c("P6081S1","ORDEN","P6020")]
-      colnames(fathers) <- c("Parent", "Person","Genre")
-      mothers = MyData_filtered[,c("P6083S1","ORDEN","P6020")]
-      colnames(mothers) <- c("Parent","Person","Genre")
+      fathers = MyData_filtered[,c("P6081S1","ORDEN","P6020","P6051","P6040")]
+      colnames(fathers) <- c("Parent","Person","Genre","Relation","Age")
+      mothers = MyData_filtered[,c("P6083S1","ORDEN","P6020","P6051","P6040")]
+      colnames(mothers) <- c("Parent","Person","Genre","Relation","Age")
       
       parents = rbind(fathers,mothers)
       
-      people = mothers[,c("Person","Genre")]
+      people = mothers[,c("Person","Genre","Relation","Age")]
+      
+      people$Person[people$Relation == 1] <- paste(people$Person[people$Relation == 1],". Jefe de hogar (", sep = "")
+      people$Person[people$Relation == 2] <- paste(people$Person[people$Relation == 2],". Pareja (", sep = "")
+      people$Person[people$Relation == 3] <- paste(people$Person[people$Relation == 3],". Hijo(a) (", sep = "")
+      people$Person[people$Relation == 4] <- paste(people$Person[people$Relation == 4],". Nieto(a) (", sep = "")
+      people$Person[people$Relation == 5] <- paste(people$Person[people$Relation == 5],". Padre/Madre (", sep = "")
+      people$Person[people$Relation == 6] <- paste(people$Person[people$Relation == 6],". Suegro(a) (", sep = "")
+      people$Person[people$Relation == 7] <- paste(people$Person[people$Relation == 7],". Hermano(a) (", sep = "")
+      people$Person[people$Relation == 8] <- paste(people$Person[people$Relation == 8],". Yerno/Nuera (", sep = "")
+      people$Person[people$Relation == 9] <- paste(people$Person[people$Relation == 9],". Otro pariente del jefe de hogar (", sep = "")
+      people$Person[people$Relation == 10] <- paste(people$Person[people$Relation == 10],". Empleado(a) del servicio domestico (", sep = "")
+      people$Person[people$Relation == 11] <- paste(people$Person[people$Relation == 11],". Parientes del servicio domestico (", sep = "")
+      people$Person[people$Relation == 12] <- paste(people$Person[people$Relation == 12],". Trabajador (", sep = "")
+      people$Person[people$Relation == 13] <- paste(people$Person[people$Relation == 13],". Pensionista (", sep = "")
+      people$Person[people$Relation == 14] <- paste(people$Person[people$Relation == 14],". Otro pariente (", sep = "")
+      people$Person <- paste(people$Person,people$Age," años)", sep = "")
       
       people$Genre[people$Genre == 1] <- "Hombre"
       people$Genre[people$Genre == 2] <- "Mujer"
@@ -176,12 +192,11 @@ server <- function(input, output, session) {
         
         forceNetwork(Links = parentChild, Nodes = people, Source = "Parent", Target = "Person", Value = "Value",
                      NodeID = "Person", Group = "Genre", arrows = TRUE, fontSize = 12, opacity = 1, legend = TRUE,
-                     colourScale = JS("d3.scaleOrdinal(d3.schemeCategory10);"), bounded = TRUE, zoom = TRUE)
+                     colourScale = JS("d3.scaleOrdinal(d3.schemeCategory10);"), bounded = TRUE, charge = -6)
       }
     }
   })
-  
-}  
 
+}  
 
 
